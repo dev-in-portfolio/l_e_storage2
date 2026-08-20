@@ -53,4 +53,5 @@ jobs:
           git add -- "$path"
           git rm -- "$manifest"
           git commit -m "Import $path"
+          git pull --rebase origin "${TRANSFER_BRANCH}"
           git push origin HEAD:"${TRANSFER_BRANCH}"
